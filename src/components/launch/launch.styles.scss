@@ -1,0 +1,74 @@
+.launch-container {
+  width: 80%;
+  margin: 70px auto 0;
+  display: flex;
+
+  .launch-image-container {
+    width: 240px;
+    height: 328px;
+    overflow: hidden;
+    border: 5px solid #303030;
+    margin-right: 50px;
+    -webkit-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+    box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background-image: url(../../assets/launch1.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &:hover {
+      .background-image {
+        transform: scale(1.5);
+        transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+      }
+    }
+  }
+
+  .launch-list-container {
+    width: 100%;
+    background-color: #595959;
+    -webkit-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+    -moz-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+    box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+  }
+
+  .launch-table-head {
+    background-color: #303030;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .table-head-name {
+      width: 51%;
+      margin-left: 45px;
+    }
+
+    .timezone-buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px;
+
+      .timezone-button {
+        cursor: pointer;
+      }
+
+      .timezone-button-active {
+        color: yellow;
+      }
+
+      .timezone-button:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.launch-list-item-container {
+  display: flex;
+
+  .ll-name-section {
+    margin-left: 40px;
+    display: flex;
+    flex: 1;
+    font-weight: 600;
+    color: white;
+  }
+
+  .ll-window-section {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .ll-windowstart-span {
+    color: #95e330;
+    font-weight: 600;
+  }
+
+  .ll-windowend-span {
+    color: #ff5252;
+    font-weight: 600;
+  }
+
+  .ll-dash-span {
+    color: yellow;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.launch-list-item-container:nth-child(even) {
+  background-color: #6b6868;
+}

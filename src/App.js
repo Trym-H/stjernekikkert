@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
+
+import Header from "./components/header/header.component";
+import Home from "./components/home/home.component";
+import Launch from "./components/launch/launch.component";
+import Iss from "./components/iss/iss.component";
+import Nasa from "./components/nasa/nasa.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/launch" component={Launch} />
+          <Route exact path="/iss" component={Iss} />
+          <Route exact path="/nasa" component={Nasa} />
+        </Switch>
+      </div>
+    </>
   );
 }
 
