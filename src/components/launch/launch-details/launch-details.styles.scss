@@ -2,5 +2,33 @@
   width: 100%;
   margin-top: 20px;
   height: 500px;
-  background-color: #6b6868;
+  background-color: #5c5757;
+  box-sizing: border-box;
+  padding: 15px;
+  -webkit-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+  box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
+
+  .statusColorGreen,
+  .statusColorCertain,
+  .statusColorSuccess {
+    color: #95e330;
+    font-weight: 500;
+  }
+
+  .statusColorRed,
+  .statusColorUncertain,
+  .statusColorFailed {
+    color: #f2274f;
+    font-weight: 500;
+  }
+
+  .details-rel-para {
+    margin: 0;
+  }
+
+  .details-rocket-name {
+    margin-top: 0;
+    color: yellow;
+  }
 }

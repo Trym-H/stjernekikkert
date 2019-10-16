@@ -7,6 +7,7 @@ import Home from "./components/home/home.component";
 import Launch from "./components/launch/launch.component";
 import Iss from "./components/iss/iss.component";
 import Nasa from "./components/nasa/nasa.component";
+import LaunchContext from "./contexts/launch/launch.context";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/launch" component={Launch} />
           <Route exact path="/iss" component={Iss} />
           <Route exact path="/nasa" component={Nasa} />
+          <LaunchContext.Provider>
+            <Route exact path="/launch" component={Launch} />
+          </LaunchContext.Provider>
         </Switch>
       </div>
     </>

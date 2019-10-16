@@ -9,18 +9,21 @@ const Launch = () => {
     launches: [],
     isLoading: false
   });
-  const [fetchUrl, setFetchUrl] = useState(
+  const [nextLaunchesUrl, setFetchUrl] = useState(
     "https://launchlibrary.net/1.3/launch/next/5"
   );
 
-  const [isLocal, setIsLocal] = useState(false);
-  const [launchSelected, setLaunchSelected] = useState(true);
+  const [selectedLaunch, setSelectedLaunch] = useState({});
 
+  const [isLocal, setIsLocal] = useState(false);
+  const [launchSelected, setLaunchSelected] = useState(false);
+
+  // fetch next 5 launches
   useEffect(() => {
     const fetchLaunch = async () => {
       try {
         setLaunchData({ isLoading: true });
-        const response = await fetch(fetchUrl);
+        const response = await fetch(nextLaunchesUrl);
         const resJson = await response.json();
         setLaunchData({ launches: resJson.launches, isLoading: false });
       } catch (err) {
@@ -30,6 +33,11 @@ const Launch = () => {
 
     fetchLaunch();
   }, []);
+
+  const handleClick = launch => {
+    setLaunchSelected(true);
+    setSelectedLaunch(launch);
+  };
 
   return (
     <div className="launch-container">
@@ -70,14 +78,23 @@ const Launch = () => {
             <p style={{ color: "white", marginLeft: "20px" }}>loading ...</p>
           ) : (
             launchData.launches.map(launch => (
-              <LaunchList key={launch.id} launch={launch} isLocal={isLocal} />
+              <LaunchList
+                key={launch.id}
+                launch={launch}
+                isLocal={isLocal}
+                handleClick={handleClick}
+              />
             ))
           )}
         </div>
       </div>
       <div className="details-container">
         {" "}
-        {launchSelected ? <LaunchDetails /> : <p>CLICK ON A NAME ...</p>}
+        {launchSelected ? (
+          <LaunchDetails launch={selectedLaunch} />
+        ) : (
+          <p>CLICK ON A NAME ...</p>
+        )}
       </div>
     </div>
   );
