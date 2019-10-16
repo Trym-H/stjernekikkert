@@ -1,5 +1,5 @@
 export const formatDate = ({ date, isLocal }) => {
-  if (!isLocal) {
+  if (isLocal) {
     const fullDate = new Date(date);
 
     let minutes = addZero(fullDate.getMinutes());

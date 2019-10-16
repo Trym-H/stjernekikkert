@@ -16,6 +16,10 @@
     color: white;
 
     &:hover {
+      color: #fcba03;
+    }
+
+    &.header-nav-link-active {
       color: yellow;
     }
   }

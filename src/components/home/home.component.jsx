@@ -7,14 +7,10 @@ const Home = () => {
     <div className="home-container">
       <div className="home-menu">
         <div className="home-text-content">
-          <h1>WELCOME TO SPACEBOIS</h1>
-          <p>
-            We're just experimenting with React and open APIs, don't mind us.
-          </p>
           <p>Try out our features:</p>
           <div className="home-links">
             <Link className="home-nav-link" to="/launch">
-              UPCOMING LAUNCHES
+              LAUNCHES
             </Link>
             <Link className="home-nav-link" to="/iss">
               ISS
@@ -23,6 +19,9 @@ const Home = () => {
               NASA
             </Link>
           </div>
+          <p>
+            We're just experimenting with React and open APIs, don't mind us.
+          </p>
         </div>
       </div>
     </div>

@@ -4,7 +4,6 @@
   background-image: url("../../assets/bg_space4.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 100px;
 
   .home-menu {
     display: flex;
@@ -14,10 +13,10 @@
     text-align: center;
     width: 60%;
     margin: auto;
-    background-color: rgba($color: #424242, $alpha: 0.85);
     border-radius: 7px;
 
     .home-text-content {
+      margin-top: 15%;
       font-family: "Titillium Web", sans-serif;
       color: white;
 
@@ -26,16 +25,21 @@
       }
 
       p {
-        font-size: 20px;
+        font-size: 40px;
       }
 
       .home-links {
         width: 100%;
       }
       .home-nav-link {
-        color: yellow;
-        margin: 10px;
-        font-size: 30px;
+        color: #f0ff80;
+        margin: 40px;
+        font-size: 60px;
+        text-decoration: none;
+
+        &:hover {
+          color: yellow;
+        }
       }
     }
   }
