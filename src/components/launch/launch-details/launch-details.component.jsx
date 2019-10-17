@@ -36,6 +36,7 @@ const LaunchDetails = props => {
           rocket
         }}
       />
+      <div className="horizontal-divider" />
       <div>
         <div>
           <p>Rocket:</p>

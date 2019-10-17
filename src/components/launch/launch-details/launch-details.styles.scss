@@ -1,34 +1,17 @@
 .launch-details-container {
   width: 100%;
   margin-top: 20px;
-  height: 500px;
   background-color: #5c5757;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 15px 25px;
+  display: flex;
   -webkit-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
   -moz-box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
   box-shadow: -1px 0px 48px -7px rgba(0, 0, 0, 0.34);
 
-  .statusColorGreen,
-  .statusColorCertain,
-  .statusColorSuccess {
-    color: #95e330;
-    font-weight: 500;
-  }
-
-  .statusColorRed,
-  .statusColorUncertain,
-  .statusColorFailed {
-    color: #f2274f;
-    font-weight: 500;
-  }
-
-  .details-rel-para {
-    margin: 0;
-  }
-
-  .details-rocket-name {
-    margin-top: 0;
-    color: yellow;
+  .horizontal-divider {
+    width: 2px;
+    background-color: white;
+    margin: 0 20px;
   }
 }

@@ -1,0 +1,100 @@
+$default-box-color: #616161;
+
+.ld-basics-container {
+  font-size: 1.1rem;
+
+  .basics-heading {
+    margin-top: 0;
+    font-weight: 300;
+    color: yellow;
+  }
+
+  .basics-rocket-name {
+    font-size: 1.1rem;
+    background-color: $default-box-color;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    a {
+      color: #66e8ff;
+      font-weight: 600;
+    }
+  }
+
+  .basics-status-container {
+    background-color: $default-box-color;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .basics-status-para {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .basics-rel-container {
+    margin-top: 0;
+  }
+
+  .failure-reason {
+    color: #ff4f58;
+    font-weight: 500;
+  }
+  .holding-reason {
+    color: #fffd82;
+    font-weight: 500;
+  }
+
+  .basics-reasons-container {
+    background-color: $default-box-color;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 15px;
+
+    .basics-reasons {
+      margin: 0;
+    }
+  }
+  .basics-links-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: $default-box-color;
+
+    .basics-links-section:nth-child(2) {
+      margin-left: 35px;
+    }
+
+    a {
+      color: #66e8ff;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  .basics-time-date {
+    font-weight: 700;
+  }
+
+  .statusColorGreen,
+  .statusColorCertain,
+  .statusColorSuccess {
+    color: #95e330;
+    font-weight: 700;
+  }
+
+  .statusColorRed,
+  .statusColorUncertain,
+  .statusColorFailed {
+    color: #ff4f58;
+    font-weight: 700;
+  }
+}
