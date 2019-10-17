@@ -1,9 +1,6 @@
 import React from "react";
 import "./launch-details.styles.scss";
-import {
-  getStatus,
-  dateTimeProbability
-} from "../launch-details/launch-details.utils";
+import LaunchDetailsBasics from "../launch-details-basics/launch-details-basics.component";
 
 const LaunchDetails = props => {
   console.log(props.launch);
@@ -26,34 +23,44 @@ const LaunchDetails = props => {
 
   return (
     <div className="launch-details-container">
-      <p className="details-rocket-name">{name}</p>
-      <p>
-        Launch Status:{" "}
-        <span className={`${"statusColor" + getStatus(status)}`}>
-          {getStatus(status)}
-        </span>
-      </p>
-      <div className="details-rel-container">
-        <p className="details-rel-para">
-          Reliability of launch-date:{" "}
-          <span className={`${"statusColor" + dateTimeProbability(tbddate)}`}>
-            {dateTimeProbability(tbddate)}
-          </span>
-        </p>
-        <p className="details-rel-para">
-          Reliability of launch-time:{" "}
-          <span className={`${"statusColor" + dateTimeProbability(tbdtime)}`}>
-            {dateTimeProbability(tbdtime)}
-          </span>
-        </p>
-      </div>
-      {!infoURLs.length < 0 ? <p>More info: </p> : ""}
-      {!vidURLs.length < 0 ? <p>Video links: </p> : ""}
-
+      <LaunchDetailsBasics
+        basics={{
+          failreason,
+          holdreason,
+          infoURLs,
+          name,
+          status,
+          tbddate,
+          tbdtime,
+          vidURLs,
+          rocket
+        }}
+      />
       <div>
-        <p>Rocket:</p>
-        <p>Agency / Agencies: </p>
-        <p></p>
+        <div>
+          <p>Rocket:</p>
+          <div>
+            Agency / Agencies:
+            {rocket.agencies ? (
+              rocket.agencies.map(agency => (
+                <a
+                  target="_blanc"
+                  rel="noopener noreferrer"
+                  href={agency.wikiURL}
+                  key={agency.id}
+                >
+                  {agency.name}
+                </a>
+              ))
+            ) : (
+              <p>No agencies listed</p>
+            )}
+          </div>
+          <p>
+            {" "}
+            <a href={rocket.wikiURL}>{}</a>{" "}
+          </p>
+        </div>
       </div>
     </div>
   );
