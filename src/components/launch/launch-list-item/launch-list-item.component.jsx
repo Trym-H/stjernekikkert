@@ -4,10 +4,18 @@ import "./launch-list-item.styles.scss";
 import { formatDate } from "../launch.utils";
 
 const LaunchList = props => {
+  const { handleClick } = props;
   return (
     <div className="launch-list-item-container">
       <div className="ll-name-section">
-        <p>{props.launch.name}</p>
+        <p
+          className="ll-rocket-name"
+          onClick={() => {
+            handleClick(props.launch);
+          }}
+        >
+          {props.launch.name}
+        </p>
       </div>
       <div className="ll-window-section">
         <p>
