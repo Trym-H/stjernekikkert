@@ -39,7 +39,7 @@ $default-box-color: #616161;
   }
 
   .failure-reason {
-    color: #ff4f58;
+    color: #ff6969;
     font-weight: 500;
   }
   .holding-reason {
@@ -85,6 +85,7 @@ $default-box-color: #616161;
   }
 
   .statusColorGreen,
+  .statusColorUndefined,
   .statusColorCertain,
   .statusColorSuccess {
     color: #95e330;
@@ -94,7 +95,26 @@ $default-box-color: #616161;
   .statusColorRed,
   .statusColorUncertain,
   .statusColorFailed {
-    color: #ff4f58;
+    color: #ff6969;
     font-weight: 700;
+  }
+
+  .inbetween-headings {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .inb-heading-low {
+    margin-top: 40px;
+  }
+
+  .launchpads-container {
+    background-color: $default-box-color;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+
+    p {
+      margin: 0;
+    }
   }
 }

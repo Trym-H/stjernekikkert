@@ -1,0 +1,31 @@
+.ld-location-container {
+  font-size: 1.1rem;
+  .location-cc {
+    color: #f0ffa6;
+    font-weight: 500;
+    margin-right: 5px;
+  }
+
+  .location-name {
+    color: yellow;
+    margin-left: 5px;
+  }
+
+  .location-name-container {
+    background-color: #696969;
+    border-radius: 4px;
+    display: flex;
+    padding: 3px 10px;
+    margin-bottom: 15px;
+  }
+
+  .location-name-container {
+    margin-right: 20px;
+  }
+
+  .location-heading {
+    margin-top: 0;
+    font-weight: 300;
+    color: yellow;
+  }
+}

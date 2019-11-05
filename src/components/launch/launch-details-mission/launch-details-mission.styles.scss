@@ -1,0 +1,44 @@
+$default-box-color: #616161;
+
+.ld-mission-container {
+  .missions-heading {
+    margin-top: 0;
+    font-weight: 300;
+    color: yellow;
+  }
+
+  .ld-mission-name-nourl {
+    color: yellow;
+  }
+
+  .missions-infolink-container {
+    margin: 15px 5px;
+    background-color: $default-box-color;
+  }
+
+  .missions-agency-heading {
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
+  .ld-mission-basics-container {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: $default-box-color;
+
+    .ld-missions-type {
+      color: #6cd929;
+      font-weight: 600;
+    }
+
+    .ld-missions-desc {
+      color: #fadd5f;
+      font-weight: 600;
+    }
+
+    p {
+      margin-top: 5px;
+    }
+  }
+}

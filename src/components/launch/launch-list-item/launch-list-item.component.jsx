@@ -1,7 +1,7 @@
 import React from "react";
 import "./launch-list-item.styles.scss";
 
-import { formatDate } from "../launch.utils";
+import { formatDate } from "../utils/launch.utils";
 
 const LaunchList = props => {
   const { handleClick } = props;

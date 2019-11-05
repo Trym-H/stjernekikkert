@@ -20,3 +20,17 @@ export const dateTimeProbability = dateTimeNumber => {
     return "Certain";
   }
 };
+
+export const formatDefaultPads = pads => {
+  let splitpads = pads.split(",");
+
+  let findDuplicates = arr =>
+    arr.filter((item, index) => arr.indexOf(item) != index);
+
+  let duplicates = findDuplicates(splitpads);
+
+  if (duplicates.length !== 0) {
+    let noDuplicates = [...new Set(findDuplicates(splitpads))];
+    return noDuplicates;
+  } else return splitpads;
+};

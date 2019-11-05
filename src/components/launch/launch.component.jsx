@@ -9,9 +9,8 @@ const Launch = () => {
     launches: [],
     isLoading: false
   });
-  const [nextLaunchesUrl, setFetchUrl] = useState(
-    "https://launchlibrary.net/1.3/launch/next/5"
-  );
+
+  const [agenciesLSP, setAgenciesLSP] = useState([]);
 
   const [selectedLaunch, setSelectedLaunch] = useState({});
 
@@ -23,7 +22,9 @@ const Launch = () => {
     const fetchLaunch = async () => {
       try {
         setLaunchData({ isLoading: true });
-        const response = await fetch(nextLaunchesUrl);
+        const response = await fetch(
+          "https://launchlibrary.net/1.4/launch/next/5"
+        );
         const resJson = await response.json();
         setLaunchData({ launches: resJson.launches, isLoading: false });
       } catch (err) {

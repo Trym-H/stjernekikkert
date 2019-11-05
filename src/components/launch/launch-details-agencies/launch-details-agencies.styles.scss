@@ -1,0 +1,81 @@
+$default-box-color: #616161;
+
+.agencies-container {
+  background-color: inherit;
+  margin-top: 20px;
+
+  .agency-basic-info-container {
+    background-color: $default-box-color;
+    border-radius: 4px;
+    display: flex;
+    padding: 3px;
+    margin-bottom: 15px;
+
+    p {
+      margin: 0 15px;
+    }
+  }
+
+  .agency-intent-container {
+    background-color: $default-box-color;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px;
+    padding-bottom: 7px;
+
+    .agency-lsp {
+      margin: 5px 10px 0;
+    }
+  }
+
+  .agency-types-container {
+    display: flex;
+    flex-direction: row;
+
+    p {
+      margin: 0 10px;
+    }
+  }
+
+  a {
+    color: #66e8ff;
+    font-weight: 600;
+  }
+
+  .agency-green-span {
+    color: #95e330;
+    font-weight: 700;
+  }
+
+  .agency-red-span {
+    color: #ff4f58;
+    font-weight: 700;
+  }
+
+  .agency-type,
+  .agencies-abbrev,
+  .agency-cc-span {
+    color: #fffd82;
+    font-weight: 500;
+  }
+
+  .agency-info-links-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: $default-box-color;
+
+    a {
+      color: #66e8ff;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+}

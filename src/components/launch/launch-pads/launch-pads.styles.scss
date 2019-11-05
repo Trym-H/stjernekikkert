@@ -1,0 +1,33 @@
+$default-box-color: #616161;
+
+.pad-agency-heading {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+a {
+  color: #66e8ff;
+  font-weight: 400;
+}
+
+.launch-or-landing-span {
+  color: yellow;
+  font-weight: 500;
+}
+
+.agency-divider {
+  margin-top: 20px;
+  width: 100%;
+  height: 2px;
+  background-color: #434544;
+}
+
+.launch-pads-container {
+  background-color: $default-box-color;
+  padding: 3px 15px;
+  border-radius: 4px;
+
+  p {
+    margin: 5px 0;
+  }
+}

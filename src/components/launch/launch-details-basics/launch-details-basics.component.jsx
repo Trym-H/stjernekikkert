@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./launch-details-basics.styles.scss";
+
+import Agency from "../launch-details-agencies/launch-details-agencies.component";
 
 import {
   getStatus,
@@ -7,8 +9,6 @@ import {
 } from "../launch-details/launch-details.utils";
 
 const LaunchDetailsBasics = props => {
-  console.log(props);
-
   const infoURLs = [
     "https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets",
     "https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets",
@@ -31,8 +31,13 @@ const LaunchDetailsBasics = props => {
     tbddate,
     tbdtime,
     // vidURLs,
+    lsp,
+    pads,
     rocket
   } = props.basics;
+
+  // console.log(pads);
+
   return (
     <div className="ld-basics-container">
       <h1 className="basics-heading">BASICS:</h1>
@@ -42,6 +47,20 @@ const LaunchDetailsBasics = props => {
           {name}
         </a>{" "}
       </p>
+      {pads ? (
+        <div className="launchpads-container">
+          Default launch pads:
+          {pads.map(pad => {
+            return (
+              <p key={pad.id} className="statusColorCertain">
+                {pad.name}
+              </p>
+            );
+          })}
+        </div>
+      ) : (
+        ""
+      )}
       <div className="basics-status-container">
         <p className="basics-status-para">
           Launch Status:{" "}
@@ -79,6 +98,15 @@ const LaunchDetailsBasics = props => {
           ""
         )}
       </div>
+      <div>
+        {infoURLs.length || vidURLs.length ? (
+          <p className="inbetween-headings">
+            More information about the launch:
+          </p>
+        ) : (
+          ""
+        )}
+      </div>
       <div className="basics-links-container">
         {infoURLs.length ? (
           <div className="basics-links-section">
@@ -107,6 +135,18 @@ const LaunchDetailsBasics = props => {
           </div>
         ) : (
           ""
+        )}
+      </div>
+      <div>
+        <p className="inbetween-headings inb-heading-low">
+          Launch service provider responsible for launch:
+        </p>
+        {lsp ? (
+          <Agency agencyId={lsp.id} />
+        ) : (
+          <div>
+            <p>No agencies listed</p>
+          </div>
         )}
       </div>
     </div>
